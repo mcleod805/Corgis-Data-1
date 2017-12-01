@@ -1,5 +1,5 @@
 body{
-    background-color: tan;
+    background-color: lightgrey;
     }
     
     p{
@@ -8,6 +8,6 @@ body{
     }
 
 img {
-    padding: 25px;
+    padding: 0px;
     border:5px solid red;
     margin:20px;
