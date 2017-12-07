@@ -3,6 +3,16 @@ import os
 import json
 app = Flask(__name__)
 
+@app.route("/PAGE 1")
+def render_response():
+    state = request.args["Car Companies"]
+    return render_template('page1.html',options = get_state_options(), response = your_interesting_demographic_function(state))
+def get_state_options():
+    options = ""from flask import Flask, request, Markup, render_template, Markup
+import os
+import json
+app = Flask(__name__)
+
 @app.route("/home")
 def render_response():
     state = request.args["states"]
@@ -33,3 +43,4 @@ def render_main():
     return render_template('home.html',options = get_state_options())
 if __name__=="__main__":
     app.run(debug=True, port=54321)
+   
