@@ -9,9 +9,6 @@ def render_response():
     return render_template('page1.html',options = get_state_options(), response = your_interesting_demographic_function(state))
 def get_state_options():
     options = ""from flask import Flask, request, Markup, render_template, Markup
-import os
-import json
-app = Flask(__name__)
 
 @app.route("/home")
 def render_response():
