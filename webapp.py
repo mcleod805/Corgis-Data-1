@@ -13,7 +13,7 @@ def get_state_options():
 @app.route("/home")
 def render_response():
     state = request.args["states"]
-    return render_template('home.html',options = get_state_options(), response = your_interesting_demographic_function(state))
+    return render_template('index.html',options = get_state_options(), response = your_interesting_demographic_function(state))
 def get_state_options():
     options = ""
     with open('county_demographics.json') as demographics_data:
@@ -37,7 +37,7 @@ def your_interesting_demographic_function(stateName):
         return (total/number)
 @app.route("/")
 def render_main():
-    return render_template('home.html',options = get_state_options())
+    return render_template('index.html',options = get_state_options())
 if __name__=="__main__":
     app.run(debug=True, port=54321)
    
