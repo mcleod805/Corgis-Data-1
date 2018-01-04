@@ -12,17 +12,17 @@ def get_state_options():
 
 @app.route("/home")
 def render_response():
-    state = request.args["states"]
+    state = request.args["Makes"]
     return render_template('index.html',options = get_state_options(), response = your_interesting_demographic_function(state))
 def get_state_options():
     options = ""
     with open('county_demographics.json') as demographics_data:
-        counties = json.load(demographics_data)
-    state = []
-    for c in counties:
-        if not c["State"] in state:
-              state.append(c["State"])
-    for s in state:
+        cars = json.load(demographics_data)
+    Makes = []
+    for c in cars:
+        if not c["Make"] in Makes:
+              Make.append(c["Make"])
+    for s in cars:
        options += Markup("<option value=\"" + s + "\">" + s + "</option>")
     return options
 def your_interesting_demographic_function(stateName):
