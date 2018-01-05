@@ -16,8 +16,8 @@ def render_response():
     return render_template('index.html',options = get_state_options(), response = your_interesting_demographic_function(state))
 def get_state_options():
     options = ""
-    with open('county_demographics.json') as demographics_data:
-        cars = json.load(demographics_data)
+    with open('cars.json') as cars_data:
+        cars = json.load(cars_data)
     Makes = []
     for c in cars:
         if not c["Make"] in Makes:
@@ -27,7 +27,6 @@ def get_state_options():
     return options
 def your_interesting_demographic_function(stateName):
     with open('cars (1).json') as cars_data: 
-        return (Make)
 @app.route("/")
 def render_main():
     return render_template('index.html',options = get_state_options())
