@@ -15,6 +15,10 @@
           <a class="navbar-brand" href="index.html">CARS DATA</a>
         </div>
         <ul class="nav navbar-nav">
+		<li {% if active_Page == "HOME" %} class = "active" {% endif %}><a href="home">Home</a></li>
+	    <li {% if active_Page == "page1" %} class = "active" {% endif %}><a href="PAGE 1">Page 1</a></li>
+	    <li {% if active_Page == "page2" %} class = "active" {% endif %}><a href="PAGE 2">Page 2</a></li>
+ 	    <li {% if active_Page == "page3" %} class = "active" {% endif %}><a href="PAGE 3">Page 3</a></li>
 			<li><a href="index.html">HOME</a></li>
 			<li class="active"><a href="page1.html">PAGE 1</a></li>
 			<li><a href="page2.html">PAGE 2</a></li>
