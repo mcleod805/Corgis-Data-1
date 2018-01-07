@@ -8,7 +8,7 @@ def render_response():
     state = request.args["Car Companies"]
     return render_template('page1.html',options = get_state_options(), response = your_interesting_demographic_function(state))
 def get_state_options():
-    options = ""from flask import Flask, request, Markup, render_template, Markup
+    options = "from flask import Flask, request, Markup, render_template, Markup"
 
 @app.route("/home")
 def render_response():
