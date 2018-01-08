@@ -29,7 +29,7 @@ def your_interesting_demographic_function(stateName):
     with open('cars (1).json') as cars_data: 
 @app.route("/")
 def render_main():
-    return render_template('index.html',options = get_state_options())
-if __name__=="__main__":
+    return render_template('index.html')
+if __name__== '__main__':
     app.run(debug=True, port=54321)
    
