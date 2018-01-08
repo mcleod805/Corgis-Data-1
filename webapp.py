@@ -25,8 +25,6 @@ def get_state_options():
     for s in cars:
        options += Markup("<option value=\"" + s + "\">" + s + "</option>")
     return options
-def your_interesting_demographic_function(stateName):
-    with open('cars (1).json') as cars_data: 
 @app.route("/")
 def render_main():
     return render_template('index.html')
