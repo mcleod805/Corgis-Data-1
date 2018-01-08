@@ -3,6 +3,10 @@ import os
 import json
 app = Flask(__name__)
 
+@app.route("/")
+def render_main():
+    return render_template('index.html')
+
 @app.route("/PAGE 1")
 def render_response():
     state = request.args["Car Companies"]
@@ -23,13 +27,9 @@ def get_state_options():
     for s in cars:
        options += Markup("<option value=\"" + s + "\">" + s + "</option>")
     return options
-def your_interesting_demographic_function(stateName):
+def your_interesting_demographic_function(state):
     with open('cars (1).json') as cars_data: 
-    return stateName
-        
-@app.route("/")
-def render_main():
-    return render_template('index.html')
+    return state
 if __name__== '__main__':
     app.run(debug=True, port=54321)
    
